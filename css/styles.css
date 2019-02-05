@@ -33,9 +33,16 @@ body {
 }
 
 header {
-  height: calc(3.2rem * 1.15);
+  height: calc((3.2rem * 1.15) + (1.6rem * 1.15) + 4rem);
   margin: 0;
   margin-top: var(--font-size);
+  opacity: 1;
+  transition: height var(--transition-duration), margin var(--transition-duration), opacity var(--transition-duration);
+}
+
+header > p {
+  height: calc(1.6rem * 1.15);
+  margin-top: 4rem;
   opacity: 1;
   transition: height var(--transition-duration), margin var(--transition-duration), opacity var(--transition-duration);
 }
@@ -109,7 +116,12 @@ h4 {
   transition: height var(--transition-duration), margin var(--transition-duration), opacity var(--transition-duration);
 }
 
+header.visible {
+  height: calc(3.2rem * 1.15);
+}
+
 header.invisible,
+header > p.invisible,
 .question.invisible,
 .response.invisible,
 .results-container.invisible {

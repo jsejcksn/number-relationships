@@ -218,7 +218,7 @@ class Metrics {
           'Review',
         ]),
         xEl.gen('h4', null, ...[
-          'Questions and answers >> your initial response(s)',
+          'Questions and answers : your initial response(s)',
         ]),
       ]));
     
@@ -226,7 +226,7 @@ class Metrics {
       if (record.get('errors').length > 0) {
         review.appendChild(
           xEl.gen('p', null, ...[
-            `${record.get('question')} = ${record.get('answer')} >> ${record.get('errors').join(', ')}`
+            `${record.get('question')} = ${record.get('answer')} : ${record.get('errors').join(', ')}`
           ]));
       }
     }
@@ -425,7 +425,8 @@ class Pair {
 
 const header = document.body.appendChild(
   xEl.gen('header', {class: 'centered-text'}, ...[
-    xEl.gen('h1', null, 'Number relationships')
+    xEl.gen('h1', null, 'Number relationships'),
+    xEl.gen('p', null, 'Select the input to begin. Deselect the input when you are ready to see your metrics.'),
   ]));
 const question = document.body.appendChild(
   xEl.gen('p', {class: 'question centered-text'}));
@@ -451,6 +452,7 @@ response.addEventListener('input', () => {
 
 response.addEventListener('focus', () => {
   header.classList.add('invisible');
+  header.querySelector('p').classList.add('invisible');
 });
 
 response.addEventListener('blur', () => {
@@ -458,5 +460,6 @@ response.addEventListener('blur', () => {
   question.classList.add('invisible');
   response.classList.add('invisible');
   resultsContainer.classList.remove('invisible');
+  header.classList.add('visible');
   header.classList.remove('invisible', 'centered-text');
 });
