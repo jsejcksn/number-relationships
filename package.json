@@ -1,0 +1,30 @@
+{
+  "name": "number-relationships",
+  "version": "0.9.0",
+  "description": "Become familiar with the relationships between the single digits in base-10",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsejcksn/number-relationships.git"
+  },
+  "keywords": [
+    "decimal",
+    "binary",
+    "base-10",
+    "numbers",
+    "learning"
+  ],
+  "author": "Jesse Jackson <npm@jcksn.org> (https://jcksn.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsejcksn/number-relationships/issues"
+  },
+  "homepage": "https://github.com/jsejcksn/number-relationships#readme",
+  "devDependencies": {
+    "@jsejcksn/eslint-config": "^2.0.1",
+    "eslint": "^5.13.0"
+  }
+}
