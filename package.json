@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/jsejcksn/number-relationships#readme",
   "devDependencies": {
-    "@jsejcksn/eslint-config": "^2.0.1",
-    "eslint": "^5.13.0"
+    "@jsejcksn/eslint-config": "^2.0.4",
+    "eslint": "^6.1.0"
   }
 }
